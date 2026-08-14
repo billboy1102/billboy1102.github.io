@@ -2,22 +2,122 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Bobbey Games</title>
-  <meta name="description" content="Trang nhà phát triển Bobbey Games.">
-  <style>
-    html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#07111f;color:#eef7ff}
-    main{max-width:720px;margin:0 auto;padding:64px 24px}
-    h1{font-size:42px;margin:0 0 12px}
-    p{color:#9db4c8;line-height:1.7}
-    a{color:#55e69a}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bobbey là nhà phát triển game mobile độc lập, tạo ra những trò chơi đơn giản, vui và dễ chơi.">
+  <meta name="theme-color" content="#0b1020">
+  <meta property="og:title" content="Bobbey Games">
+  <meta property="og:description" content="Simple games. Big fun.">
+  <meta property="og:type" content="website">
+  <title>Bobbey Games — Simple games, big fun</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <h1>Bobbey Games</h1>
-    <p>Nhà phát triển trò chơi di động.</p>
-    <p><a href="/app-ads.txt">app-ads.txt</a></p>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Bobbey home">
+      <img src="assets/logo.svg" alt="" width="38" height="38">
+      <span>Bobbey</span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Điều hướng chính">
+      <a href="#games">Game</a>
+      <a href="#about">Giới thiệu</a>
+      <a href="privacy.html">Quyền riêng tư</a>
+      <a class="nav-cta" href="mailto:partnerships@bobbey.net">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">INDEPENDENT MOBILE GAME STUDIO</p>
+        <h1>Simple games.<br><span>Big fun.</span></h1>
+        <p class="hero-text">Bobbey tạo ra những game mobile dễ chơi, có nhịp độ nhanh và mang lại niềm vui trong những phút rảnh rỗi.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#games">Khám phá game</a>
+          <a class="button secondary" href="#about">Về Bobbey</a>
+        </div>
+        <div class="mini-stats" aria-label="Thông tin nhanh">
+          <div><strong>Mobile-first</strong><span>Thiết kế cho điện thoại</span></div>
+          <div><strong>Easy to play</strong><span>Chạm là chơi</span></div>
+          <div><strong>Made with care</strong><span>Chăm chút từng chi tiết</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Minh họa game không gian">
+        <div class="planet"></div>
+        <div class="orbit orbit-one"><span class="satellite"></span></div>
+        <div class="orbit orbit-two"><span class="satellite small"></span></div>
+        <div class="glow"></div>
+        <div class="floating-card card-one"><span>01</span><strong>One-tap play</strong></div>
+        <div class="floating-card card-two"><span>∞</span><strong>Endless fun</strong></div>
+      </div>
+    </section>
+
+    <section id="games" class="section games-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">OUR GAMES</p>
+        <h2>Những thế giới nhỏ,<br>niềm vui thật lớn.</h2>
+      </div>
+
+      <article class="game-card featured reveal">
+        <div class="game-visual earth-guard">
+          <div class="game-badge">COMING SOON</div>
+          <div class="mini-earth"></div>
+          <div class="shield-ring"></div>
+          <div class="meteor meteor-one"></div>
+          <div class="meteor meteor-two"></div>
+        </div>
+        <div class="game-info">
+          <p class="game-kicker">ARCADE · ONE-TAP</p>
+          <h3>Vệ Binh Trái Đất</h3>
+          <p>Bảo vệ Trái Đất bằng thao tác một chạm. Phản xạ nhanh, vượt qua thử thách và lập kỷ lục mới.</p>
+          <ul class="game-tags" aria-label="Tính năng">
+            <li>Dễ chơi</li>
+            <li>Chơi nhanh</li>
+            <li>Thử thách phản xạ</li>
+          </ul>
+          <span class="store-note">Sắp có mặt trên Google Play</span>
+        </div>
+      </article>
+
+      <div class="more-games reveal">
+        <div class="placeholder-icon">+</div>
+        <div>
+          <h3>Nhiều game hơn đang được phát triển</h3>
+          <p>Trang này được xây dựng để Bobbey có thể bổ sung game mới dễ dàng trong tương lai.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="about-card reveal">
+        <p class="eyebrow">ABOUT BOBBEY</p>
+        <h2>Game không cần phức tạp để trở nên đáng nhớ.</h2>
+        <p>Bobbey là thương hiệu phát triển game độc lập, tập trung vào trải nghiệm gọn gàng, trực quan và phù hợp để giải trí mọi lúc. Mỗi sản phẩm được xây dựng với mục tiêu: người chơi hiểu ngay cách chơi và luôn muốn thử thêm một lần nữa.</p>
+      </div>
+      <div class="values-grid">
+        <article class="value-card reveal"><span>01</span><h3>Đơn giản</h3><p>Luật chơi rõ ràng, thao tác tự nhiên và vào game nhanh.</p></article>
+        <article class="value-card reveal"><span>02</span><h3>Vui</h3><p>Mỗi lượt chơi ngắn nhưng đủ thử thách để cuốn hút.</p></article>
+        <article class="value-card reveal"><span>03</span><h3>Không ngừng cải tiến</h3><p>Lắng nghe phản hồi để cập nhật game tốt hơn theo thời gian.</p></article>
+      </div>
+    </section>
+
+    <section class="section contact-section reveal">
+      <div>
+        <p class="eyebrow">CONTACT</p>
+        <h2>Cùng theo dõi hành trình của Bobbey.</h2>
+      </div>
+      <a class="button primary" href="mailto:partnerships@bobbey.net">partnerships@bobbey.net</a>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="32" height="32"><span>Bobbey</span></a>
+    <p>© <span id="year"></span> Bobbey. All rights reserved.</p>
+    <div><a href="privacy.html">Privacy Policy</a></div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
