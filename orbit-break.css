@@ -1,10 +1,9 @@
 .orbit-break-card {
   margin-top: 24px;
   position: relative;
-  border-color: rgba(85, 229, 255, .18);
-  background:
-    linear-gradient(135deg, rgba(8, 16, 31, .98), rgba(11, 13, 26, .98));
-  box-shadow: 0 28px 90px rgba(0, 0, 0, .26);
+  border-color: rgba(56, 224, 255, .22);
+  background: linear-gradient(135deg, rgba(7, 14, 28, .99), rgba(9, 10, 22, .99));
+  box-shadow: 0 30px 100px rgba(0, 0, 0, .32), 0 0 0 1px rgba(45, 227, 255, .03);
 }
 
 .orbit-break-card::after {
@@ -13,224 +12,57 @@
   inset: 0;
   pointer-events: none;
   border-radius: inherit;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.03);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04), inset 0 0 60px rgba(36,229,255,.018);
 }
 
+/* The ORBIT BREAK art is a real standalone SVG asset in /assets.
+   Keep the HTML artwork nodes hidden so the website uses one crisp image on every device. */
 .orbit-break-visual {
   isolation: isolate;
+  min-height: 480px;
+  background: #050a14 url('assets/orbit-break-promo.svg') center center / cover no-repeat;
+}
+
+.orbit-break-visual > :not(.game-badge) {
+  display: none !important;
+}
+
+.orbit-break-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   background:
-    radial-gradient(circle at 52% 48%, rgba(36, 231, 255, .17), transparent 24%),
-    radial-gradient(circle at 44% 53%, rgba(255, 43, 191, .12), transparent 33%),
-    linear-gradient(180deg, #07111f 0%, #07101b 52%, #050912 100%);
+    linear-gradient(180deg, rgba(3,8,18,.02) 0%, transparent 65%, rgba(4,7,15,.24) 100%),
+    radial-gradient(circle at 50% 45%, transparent 40%, rgba(2,5,12,.12) 100%);
 }
 
 .coming-soon-badge {
-  border-color: rgba(74, 228, 255, .42);
-  background: rgba(52, 214, 255, .09);
-  color: #66ecff;
-  box-shadow: 0 0 26px rgba(61, 221, 255, .08);
+  z-index: 4;
+  border-color: rgba(63, 231, 255, .56);
+  background: rgba(4, 18, 31, .78);
+  color: #6cf0ff;
+  box-shadow: 0 0 28px rgba(50, 226, 255, .13), inset 0 0 18px rgba(44, 226, 255, .035);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
-
-.ob-grid {
-  position: absolute;
-  inset: 0;
-  opacity: .28;
-  background-image:
-    linear-gradient(rgba(55, 218, 255, .06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(55, 218, 255, .055) 1px, transparent 1px);
-  background-size: 34px 34px;
-  transform: perspective(520px) rotateX(63deg) scale(1.4) translateY(34%);
-  transform-origin: center bottom;
-  mask-image: linear-gradient(to top, #000 0 56%, transparent 94%);
-  -webkit-mask-image: linear-gradient(to top, #000 0 56%, transparent 94%);
-  z-index: -4;
-}
-
-.ob-glow {
-  position: absolute;
-  width: 330px;
-  height: 330px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(31, 224, 255, .17), rgba(103, 52, 255, .045) 48%, transparent 70%);
-  filter: blur(10px);
-  z-index: -3;
-}
-
-.ob-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(83, 235, 255, .19);
-  box-shadow: 0 0 32px rgba(46, 222, 255, .045), inset 0 0 24px rgba(46, 222, 255, .025);
-}
-
-.ob-ring-outer {
-  width: 330px;
-  height: 330px;
-}
-
-.ob-ring-inner {
-  width: 246px;
-  height: 246px;
-  border-color: rgba(255, 64, 201, .16);
-  transform: rotate(18deg);
-}
-
-.ob-ring-outer::before,
-.ob-ring-outer::after,
-.ob-ring-inner::before,
-.ob-ring-inner::after {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-}
-
-.ob-ring-outer::before {
-  top: 34px;
-  right: 57px;
-  background: #2cf0ff;
-  box-shadow: 0 0 18px #2cf0ff;
-}
-
-.ob-ring-outer::after {
-  left: 38px;
-  bottom: 72px;
-  background: #ff38c7;
-  box-shadow: 0 0 18px #ff38c7;
-}
-
-.ob-ring-inner::before {
-  top: 14px;
-  left: 76px;
-  background: #8cff65;
-  box-shadow: 0 0 16px #8cff65;
-}
-
-.ob-ring-inner::after {
-  right: 15px;
-  bottom: 72px;
-  background: #6d8cff;
-  box-shadow: 0 0 15px #6d8cff;
-}
-
-.ob-orb-pair {
-  position: relative;
-  width: 84px;
-  height: 216px;
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-  filter: drop-shadow(0 10px 28px rgba(0,0,0,.34));
-}
-
-.ob-connector {
-  position: absolute;
-  top: 46px;
-  width: 7px;
-  height: 124px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #22e9ff 0%, #7b66ff 48%, #ff35bd 100%);
-  box-shadow: 0 0 18px rgba(73, 225, 255, .42), 0 0 24px rgba(255, 48, 188, .2);
-}
-
-.ob-orb {
-  position: absolute;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  border: 3px solid rgba(255,255,255,.92);
-  box-shadow:
-    inset 0 0 16px rgba(255,255,255,.28),
-    0 0 16px currentColor,
-    0 0 38px color-mix(in srgb, currentColor 52%, transparent);
-}
-
-.ob-orb-cyan {
-  top: 16px;
-  color: #22ebff;
-  background: #17dff2;
-}
-
-.ob-orb-pink {
-  bottom: 16px;
-  color: #ff35bd;
-  background: #f425aa;
-}
-
-.ob-target {
-  position: absolute;
-  right: 17%;
-  bottom: 16%;
-  width: 92px;
-  height: 92px;
-  border: 3px solid #29eaff;
-  border-radius: 50%;
-  box-shadow: 0 0 24px rgba(39, 231, 255, .28), inset 0 0 18px rgba(39, 231, 255, .08);
-}
-
-.ob-target::before {
-  content: "";
-  position: absolute;
-  inset: -17px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 54, 192, .55);
-}
-
-.ob-target::after {
-  content: "";
-  position: absolute;
-  width: 128px;
-  height: 10px;
-  left: -19px;
-  top: 39px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, transparent, rgba(38, 232, 255, .72), rgba(255, 48, 187, .58), transparent);
-  transform: rotate(-22deg);
-  box-shadow: 0 0 15px rgba(49, 228, 255, .23);
-}
-
-.ob-target span {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 31px;
-  top: 31px;
-  border-radius: 50%;
-  background: rgba(239, 252, 255, .94);
-  box-shadow: 0 0 18px rgba(255,255,255,.42);
-}
-
-.ob-particle {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #71f5ff;
-  box-shadow: 0 0 10px currentColor;
-  opacity: .7;
-}
-
-.ob-particle.p1 { left: 17%; top: 28%; }
-.ob-particle.p2 { right: 23%; top: 18%; width: 3px; height: 3px; }
-.ob-particle.p3 { left: 27%; bottom: 19%; color: #ff45c4; background: currentColor; }
-.ob-particle.p4 { right: 13%; bottom: 39%; width: 4px; height: 4px; color: #8dff69; background: currentColor; }
 
 .orbit-break-info .game-kicker {
-  color: #59e7ff;
+  color: #5cecff;
 }
 
 .orbit-break-info h3 {
   letter-spacing: -.045em;
+  text-shadow: 0 0 25px rgba(69,225,255,.055);
 }
 
 .coming-soon-button {
   align-self: flex-start;
   min-width: 190px;
-  border: 1px solid rgba(95, 234, 255, .3);
-  background: linear-gradient(90deg, rgba(44, 221, 255, .11), rgba(255, 54, 192, .10));
-  color: #dffcff;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 12px 35px rgba(25, 207, 255, .06);
+  border: 1px solid rgba(95, 234, 255, .34);
+  background: linear-gradient(90deg, rgba(44, 221, 255, .12), rgba(255, 54, 192, .11));
+  color: #e8fdff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 14px 38px rgba(25, 207, 255, .07);
   cursor: default;
   letter-spacing: .08em;
   font-size: .8rem;
@@ -244,55 +76,23 @@
   .orbit-break-card {
     margin-top: 20px;
   }
+
+  .orbit-break-visual {
+    min-height: 430px;
+    background-position: 50% 48%;
+  }
 }
 
 @media (max-width: 680px) {
   .orbit-break-visual {
-    min-height: 360px;
+    min-height: 390px;
+    background-size: cover;
+    background-position: 50% center;
   }
 
-  .ob-ring-outer {
-    width: 255px;
-    height: 255px;
-  }
-
-  .ob-ring-inner {
-    width: 190px;
-    height: 190px;
-  }
-
-  .ob-orb-pair {
-    height: 180px;
-  }
-
-  .ob-connector {
-    top: 43px;
-    height: 94px;
-  }
-
-  .ob-orb {
-    width: 52px;
-    height: 52px;
-  }
-
-  .ob-target {
-    width: 76px;
-    height: 76px;
-    right: 12%;
-    bottom: 12%;
-  }
-
-  .ob-target span {
-    width: 20px;
-    height: 20px;
-    left: 25px;
-    top: 25px;
-  }
-
-  .ob-target::after {
-    width: 105px;
-    left: -16px;
-    top: 31px;
+  .coming-soon-badge {
+    top: 20px;
+    left: 20px;
   }
 
   .coming-soon-button {
